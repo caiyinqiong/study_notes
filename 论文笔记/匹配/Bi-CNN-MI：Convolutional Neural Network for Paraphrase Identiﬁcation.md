@@ -1,7 +1,6 @@
 > ACL2015，基于交互，PI
 
 <center>Convolutional Neural Network for Paraphrase Identiﬁcation</center>
-
 ## 背景
 
 本文提出了**Bi-CNN-MI**模型，使用CNN学习<u>多粒度的句子表达</u>，并在<u>各层次建模交互特征</u>。
@@ -12,7 +11,7 @@
 
 > 模型架构：
 >
-> <img src="/Users/caiyinqiong/Library/Application Support/typora-user-images/image-20191107150755839.png" alt="image-20191107150755839" style="zoom:50%;" />
+> <img src="./images/image-20191107150755839.png" alt="image-20191107150755839" style="zoom:50%;" />
 >
 > 1. CNN-SM（CNN sentence model）
 >
