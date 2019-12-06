@@ -1,7 +1,6 @@
 > > ICLR2019，开放域QA，answer rerank 
 
 <center>Evidence Aggregation for Answer Re-Ranking in Open-Domain Question Answering</center>
-
 ## 背景
 
 目前对开放域QA的研究范式是：
@@ -28,7 +27,7 @@
 
 #### 整体模型
 
-<img src="../../../notes/images/image-20191205204502785.png" alt="image-20191205204502785" style="zoom:67%;" />
+<img src="../../images/image-20191205204502785.png" alt="image-20191205204502785" style="zoom:67%;" />
 
 #### 方法1：strength-based rerank（基于协同增强假设）
 
@@ -41,21 +40,21 @@
 
 - passage aggregation
 
-  <img src="../../../notes/images/image-20191205204918216.png" alt="image-20191205204918216" style="zoom:50%;" />
+  <img src="../../images/image-20191205204918216.png" alt="image-20191205204918216" style="zoom:50%;" />
 
 - measuring aspect-level matching
 
-  <img src="../../../notes/images/image-20191205204839087.png" alt="image-20191205204839087" style="zoom:40%;" />
+  <img src="../../images/image-20191205204839087.png" alt="image-20191205204839087" style="zoom:40%;" />
 
-  <img src="../../../notes/images/image-20191205205031061.png" alt="image-20191205205031061" style="zoom:40%;" />
+  <img src="../../images/image-20191205205031061.png" alt="image-20191205205031061" style="zoom:40%;" />
 
-  <img src="../../../notes/images/image-20191205205108454.png" alt="image-20191205205108454" style="zoom:40%;" />
+  <img src="../../images/image-20191205205108454.png" alt="image-20191205205108454" style="zoom:40%;" />
 
-  <img src="../../../notes/images/image-20191205205208586.png" alt="image-20191205205208586" style="zoom:33%;" />
+  <img src="../../images/image-20191205205208586.png" alt="image-20191205205208586" style="zoom:33%;" />
 
 - Measure the entire question matching
 
-  <img src="../../../notes/images/image-20191205205321984.png" alt="image-20191205205321984" style="zoom:50%;" />
+  <img src="../../images/image-20191205205321984.png" alt="image-20191205205321984" style="zoom:50%;" />
 
 - re-rank object function
 
@@ -63,11 +62,11 @@
 
 - 目标函数
 
-  <img src="../../../notes/images/image-20191205205452090.png" alt="image-20191205205452090" style="zoom:50%;" />
+  <img src="../../images/image-20191205205452090.png" alt="image-20191205205452090" style="zoom:50%;" />
 
 #### 方法3：融合方法1和2
 
-![image-20191205205657476](../../../notes/images/image-20191205205657476.png)
+![image-20191205205657476](../../images/image-20191205205657476.png)
 
 
 
@@ -79,7 +78,7 @@
 
 结果：
 
-<img src="../../../notes/images/image-20191205205752183.png" alt="image-20191205205752183" style="zoom:33%;" />
+<img src="../../images/image-20191205205752183.png" alt="image-20191205205752183" style="zoom:33%;" />
 
 
 
