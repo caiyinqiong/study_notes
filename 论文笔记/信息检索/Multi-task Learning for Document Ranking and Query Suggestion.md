@@ -1,7 +1,5 @@
 > > ICLR2018，信息检索，多任务学习
-
 <center>Multi-Task Learning for Document Ranking and Query Suggestion</center>
-
 ##背景
 
 查询会话：某用户在短时间内的一连串查询和点击序列。
