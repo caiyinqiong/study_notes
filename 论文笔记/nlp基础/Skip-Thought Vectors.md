@@ -1,7 +1,6 @@
 > NIPS2015，句子（段落、文档）编码
 
 <center>Skip-Thought Vectors</center>
-
 ## 背景
 
 文本提出，训练一个encoder-decoder模型，来重构encoded passage周围的句子。
