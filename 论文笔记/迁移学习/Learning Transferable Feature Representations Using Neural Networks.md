@@ -3,7 +3,6 @@
 ------
 
 <center>Learning Transferable Feature Representations Using Neural Networks</center>
-
 ## 背景
 
 对于迁移学习，学习到的表达中含有的源域的专有特性会损失迁移到目标域后的性能。而且，为了目标域可适应而优化的表达通常会使在源任务上性能有所下降。

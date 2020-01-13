@@ -28,10 +28,24 @@
      > decoding：
      >
      > - 贪婪解码：每一步只取最可能的词。
+     >
      > - 穷举解码：每一步都保留所有的可能分支。
+     >
      > - beam search：每一步只保留最可能的K个分支。（具体方法：对K个分支中的每个分支，先扩展并保留top-K最可能分支，然后再K^K次方个分支中保留top-K分支，并进行下一步解码）
      >
-     >  停止解码的条件：
+     >   For NMT, increasing k too much decreases BLEU score.This is primarily because large-k beam search produces tooshort translations.
+     >
+     >   In open-ended tasks like chit-chat dialogue, large k can make output more generic.
+     >
+     > - Sampling-based decoding：good for open-ended / creative generation (poetry, stories).
+     >
+     >   <img src="images/image-20191219143632514.png" alt="image-20191219143632514" style="zoom:33%;" />
+     >
+     > ​    (一个额外的技术：Softmax temperature ------- is another way to control diversity)
+     >
+     > <img src="images/image-20191219144203342.png" alt="image-20191219144203342" style="zoom:33%;" />
+     >
+     > 停止解码的条件：
      >
      > <img src="images/image-20191216155505418.png" alt="image-20191216155505418" style="zoom:33%;" />
      >
@@ -83,6 +97,91 @@
 
 4. ULMFit
 5. BERT
+
+
+
+### Lecture14：transformer
+
+1. 用self-attention到图片生成时：（参考文献：Image Transformer. Parmar*, Vaswani*, Uszkoreit, Kaiser, Shazeer, Ku, and Tran. ICML 2018）
+
+   <img src="images/image-20191219135129144.png" alt="image-20191219135129144" style="zoom:33%;" />
+
+   Combining Locality with Self-Attention.
+
+   Restrict the attention windows to be local neighborhoods.
+
+   Good assumption for images because of spatial localit.
+
+2. 用transformer到音乐生成：（参考文献：Music Transformer. ICLR 2019）
+
+   Music generation using relative self-attention.
+
+   <img src="images/image-20191219135701746.png" alt="image-20191219135701746" style="zoom:50%;" />
+
+
+
+### Lecture15：nature language generation
+
+1. copy 机制
+
+   copy机制的问题：copy too much
+
+   解决方案：（参考文献：Bottom-Up Abstractive Summarization）
+
+   <img src="images/image-20191219152253437.png" alt="image-20191219152253437" style="zoom:33%;" />
+
+
+
+### Lecture19：bias
+
+1. Prototype Theory
+
+   One purpose of categorization is to reduce the infinite differences among stimuli to behaviourally and cognitively usable proportions
+
+2. bias
+
+   - 数据中存在bias：
+
+     - Selection Bias: Selection does not reflect a random sample
+     - Out-group homogeneity bias: Tendency to see outgroup members as more alike than ingroup members
+     - Biased Data Representation
+     - Biased Labels
+
+   - 解释中的bias
+
+     - Confirmation bias: The tendency to search for, interpret, favor, recall information in a way that confirms preexisting beliefs
+
+     - Overgeneralization（过拟合）
+     - Correlation fallacy: Confusing correlation with causation（混淆因果关系和相关性）
+     - Automation bias: Propensity for humans to favor suggestions from automated decision-making systems over contradictory information without automation
+
+
+
+### Lecture20：future
+
+1. 使用无标记数据
+
+   参考NMT，self-supervised、back-supervised
+
+2. huge model，但不是可以解决任何问题
+
+3. 多任务学习
+
+4. Low-Resource Settings
+
+   比如Low-resource languages、Low-data settings (元学习)
+
+5. 模型的可解释性
+
+   <img src="images/image-20191219222854016.png" alt="image-20191219222854016" style="zoom:40%;" />
+
+6. 
+
+
+
+
+
+
 
 
 
