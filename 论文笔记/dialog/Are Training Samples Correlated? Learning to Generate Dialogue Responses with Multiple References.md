@@ -12,13 +12,11 @@
 
 依据上述观察，提出了一个两步式的生成框架。先生成一个query的多个回答的common feature，再在此基础上根据每个回答的distinct feature生成多个diverse且合适的回答。
 
-![ScreenShot2020-01-03at22.07.48.png](http://forum.deepaccess.cn/uploads/default/optimized/1X/a72938dd99058ea143a3dd034d90bb2d8ead2e3a_2_548x499.png)
+<img src="../../images/image-20200117211629782.png" alt="image-20200117211629782" style="zoom:50%;" />
 
 
 
 ## Method-模型/方法概述
-
-
 
 ![IMG_698C65526096-1.jpeg](http://forum.deepaccess.cn/uploads/default/optimized/1X/d0e3d9e1350b18d6a27e0ea4083db39f715cd02c_2_690x347.jpeg)
 
@@ -28,11 +26,9 @@
 
 Automatic的指标上优势貌似不明显，人工评测的指标上是最优的。
 
-![ScreenShot2020-01-03at22.24.21.png](http://forum.deepaccess.cn/uploads/default/optimized/1X/d012bf6e3af02c4aa92f7e7249d62c8b3aae87ed_2_690x340.png)
+<img src="http://forum.deepaccess.cn/uploads/default/optimized/1X/d012bf6e3af02c4aa92f7e7249d62c8b3aae87ed_2_690x340.png" alt="ScreenShot2020-01-03at22.24.21.png" style="zoom:67%;" />
 
-
-
-![ScreenShot2020-01-03at22.25.53.png](http://forum.deepaccess.cn/uploads/default/optimized/1X/db923319f7d90cae45359ee111d4bfcb412b6ad2_2_690x466.png)
+<img src="http://forum.deepaccess.cn/uploads/default/optimized/1X/db923319f7d90cae45359ee111d4bfcb412b6ad2_2_690x466.png" alt="ScreenShot2020-01-03at22.25.53.png" style="zoom:50%;" />
 
 
 
@@ -42,7 +38,7 @@ Automatic的指标上优势貌似不明显，人工评测的指标上是最优�
 
 两步式的生成策略，common feature --> distinct feature。
 
-额外的监督信息 Ldisc ：输入x和生成y的相似度、x和正确{y}的相似度，认为两者要一致。
+额外的监督信息 $L_{disc}$ ：输入x和生成y的相似度、x和正确{y}的相似度，认为两者要一致。
 
 Distinct feature建模时的loss。
 
