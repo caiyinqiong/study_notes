@@ -40,6 +40,8 @@ Poly-encoder主要是学习 global self-attention特征，而不是词级别的�
 
   <img src="../../images/image-20200114161719825.png" alt="image-20200114161719825" style="zoom:50%;" />
 
+  $c_i$ 是参数，可以理解为对词的表达输出进行了m种attention-pooling，得到m个全局特征表达。
+
   <img src="../../images/image-20200114161750696.png" alt="image-20200114161750696" style="zoom:50%;" />
 
 - 基于点积 $y_{c t x t} \cdot y_{c a n d}$ ，计算两者的相似度。
