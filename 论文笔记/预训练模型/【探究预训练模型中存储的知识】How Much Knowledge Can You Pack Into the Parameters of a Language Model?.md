@@ -18,7 +18,7 @@ Neural Questions、WebQuestions、TriviaQA
 
 ##### 实验结果
 
-<img src="../../images/image-20200309214953174.png" alt="image-20200309214953174" style="zoom:33%;" />
+<img src="../../images/image-20200309214953174.png" alt="image-20200309214953174" style="zoom:50%;" />
 
 - 在最大规模（T5-11B）的模型上效果还可以，但小规模的模型还是不行。而大规模的模型对于资源受限的应用场景的实用性不太行。
 - 相比其他开放域QA模型，该方法的可解释性不行。

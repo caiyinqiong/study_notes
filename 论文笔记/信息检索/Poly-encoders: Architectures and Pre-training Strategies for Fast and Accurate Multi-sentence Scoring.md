@@ -2,7 +2,7 @@
 
 ```
 论文作者：Samuel Humeau, Kurt Shuster, Marie-Anne Lachaux, Jason Weston
-论文单位：暂无
+论文单位：Facebook AI
 论文地址：https://openreview.net/pdf?id=SkxgnnNFvH
 代码地址：暂无
 论文类别：方法

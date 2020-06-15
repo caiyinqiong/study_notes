@@ -1,4 +1,4 @@
-> > ICLR2019，开放域QA，answer rerank 
+> > ICLR2018，抽取式QA，answer rerank 
 
 <center>Evidence Aggregation for Answer Re-Ranking in Open-Domain Question Answering</center>
 ## 背景
@@ -82,3 +82,6 @@
 
 
 
+## 启发
+
+先得到候选答案再对答案排序，感觉不是最优的。最好能够在生成答案时能够结合多文档信息。

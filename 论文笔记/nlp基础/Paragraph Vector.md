@@ -1,7 +1,6 @@
 > > ICML2014，doc2vec，Paragraph Vector 
 
 <center>Distributed Representations of Sentences and Documents</center>
-
 ## 背景
 
 文本的词袋特征的缺点：1）丢失词序信息；2）忽略了词义
