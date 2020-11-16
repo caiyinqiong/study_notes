@@ -1,7 +1,6 @@
 > > 句子编码，迁移学习
 
 <center>Universal Sentence Encoder</center>
-
 ## 背景
 
 本文提出了两个模型，可以学习到可迁移的句子编码表示。
