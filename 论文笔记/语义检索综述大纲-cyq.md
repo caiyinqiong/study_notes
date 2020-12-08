@@ -261,7 +261,7 @@ semantic的定义       区分phrase的方法！！！
       >
       > Approximate Nearest Neighbor Negative Contrastive Learning for Dense Text Retrieval
 
-    - sigmoid cross entropy
+    - sigmoid cross entropy（binary cross entropy？？）
 
     - hinge loss / max margin
 
