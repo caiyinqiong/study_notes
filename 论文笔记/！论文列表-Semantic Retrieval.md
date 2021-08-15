@@ -107,8 +107,62 @@ Interactor: Exploring Flexible Query-Document Interaction for Fast and Accurate 
 - [x] Conformer-kernel with query term independence for document retrieval
 
   > 把TK模型改进到适合第一阶段检索：1）用confermer（grouped convolution and Transformer with separable self-attention）层代替Transformer层，降低内存占用；2）引入query term独立性假设；3）扩展一个term matching子模块。
+
+- [x] SparTerm: Learning Term-based Sparse Representation for Fast Text Retrieval
+
+  > SparTerm comprises an importance predictor and a gating controller. The importance predictor F generates a dense vector representing the semantic importance of each item in the vocabulary. The gating controller G generates a binary gating vector to control which terms to appear in the final sparse representation.
+
+- [x] SPLADE: Sparse Lexical and Expansion Model for First Stage Ranking
+
+  > 在SparTerm的基础上，提出explicit sparsity regularization and a log-saturation effect on term weights。
   
+- [x] GLOW : Global Weighted Self-Attention Network for Web
+
+  > It learns semantic representation for both queries and documents by integrating global weight into attention score calculation.
+
+- [x] Distilling Knowledge from Reader to Retriever for Question Answering
+
+- Efficiently Teaching an Effective Dense Retriever with Balanced Topic Aware Sampling
+
+  > We proposed to improve dense passage retrieval training with a cost-neutral topic aware (query) and balanced margin (passage pairs) sampling strategy, called TAS-Balanced.
+  >
+  > 而且使用BERT_CAT和ColBERT两个模型进行蒸馏。
+
+- COIL: Revisit Exact Lexical Match in Information Retrieval with Contextualized Inverted List
+
+  > 对dual encoder得到的上下文词嵌入（降维后）进行倒排索引。计算相似度时只看doc中存在的query term与 query term的相似度，再把所有query term的相似度相加。
+
+- UHD-BERT: Bucketed Ultra-High Dimensional Sparse Representations for Full Ranking
+
+  > 在双塔BERT的基础上学习高维稀疏表示。
+
+- Learning Passage Impacts for Inverted Indexes
+
+  > 先用DocT5Query对文档进行扩展，然后对原文档的词和扩展词进行term impact的计算。
+
+- Improving Document Representations by Generating Pseudo Query Embeddings for Dense Retrieval
+
+  > our method mimics the real queries by an iterative K-means clustering algorithm.
+
+- [x] Context-Aware Learning to Rank with Self-Attention
+
+  > In this paper, we propose a context-aware neural network model that learns item scores by applying a self-attention mechanism.
   
+- [x] 【uniCOIL】A Few Brief Notes on DeepImpact, COIL, and a Conceptual Framework for Information Retrieval Techniques
+
+- [x] 【DANCE】More Robust Dense Retrieval with Contrastive Dual Learning
+
+- [x] Contextualized Offline Relevance Weighting for Efficient and Effective Neural Retrieval
+
+- [x] PAIR: Leveraging Passage-Centric Similarity Relation for Improving Dense Passage Retrieval
+
+  > 探究不同策略的难负样例。
+  
+- [x] Jointly Optimizing Query Encoder and Product Quantization to Improve Retrieval Performance
+
+
+
+
 
 
 
@@ -118,7 +172,7 @@ Interactor: Exploring Flexible Query-Document Interaction for Fast and Accurate 
 
 - [x] ~~【SPARC】Contextualized Sparse Representations for Real-Time Open-Domain Question Answering~~（ACL2020，在DenSPI的基础上增加可学习的稀疏表示）
 
-  
+- [x] 【DensePhrases】Learning Dense Representations of Phrases at Scale
 
 - [x] ~~Efficient natural language response suggestion for smart reply.（2017，使用基于n-gram的前向神经网络得到email和候选reply的表达，使用quantization技术加快搜索效率）~~
 
@@ -133,8 +187,6 @@ Interactor: Exploring Flexible Query-Document Interaction for Fast and Accurate 
 - [x] ~~【DPR】Dense Passage Retrieval for Open-Domain Question Answering~~（2020，使用BERT分别建模query和passage，CLS处的输出作为表达，用于openQA的检索模块）【注：Sparse, Dense, and Attentional Representations for Text Retrieval中说DPR模型试dense+sparse的模式，因为该文章还提出了DPR+BM25的方法。】
 
 - [x] 【GAR】Generation-augmented retrieval for open-domain question answering（训练生成模型，输入时query，输出是answer/answer所在的句子/answer所在的passage的title。根据query生成新的context来扩展query，再用BM25等方法进行检索）
-
-  
 
 - [x] ~~【ORQA】Latent Retrieval for Weakly Supervised Open Domain Question Answering~~（ACL2019，以passage为单位编码，用ICT任务预训练retriever）
 
@@ -153,6 +205,31 @@ Interactor: Exploring Flexible Query-Document Interaction for Fast and Accurate 
   > conducted a comprehensive study on how various pre-training tasks help in the large-scale retrieval problem such as evidence retrieval for question-answering.
   >
   > With properly designed paragraph-level pre-training tasks inlcuding ICT, BFS and WLP, the two-tower Transformer models can considerably improve over the widely used BM-25 algorithm.
+  
+- [x] SPARTA: Efﬁcient Open-Domain Question Answering via Sparse Transformer Matching Retrieval
+
+  > 类似于引入查询词的独立性假设。
+  
+- [x] Efﬁcient Passage Retrieval with Hashing for Open-domain Question Answering
+
+  > we introduce Binary Passage Retriever (BPR), a memory-efﬁcient neural retrieval model that integrates a learning-to-hash technique into the state-of-the-art Dense Passage Retriever (DPR)  to represent the passage index using compact binary codes.
+
+- [x] Neural Retrieval for Question Answering with Cross-Attention Supervised Data Augmentation
+
+  > 用cross-encoder的打分进行dual-encoder的数据增强。
+  
+- [x] 【ColBERT-QA】Relevance-guided Supervision for OpenQA with ColBERT
+
+  > 解决openQA的retriever部分的训练没有监督的正负样本问题。
+
+- [x] 【RAG】Retrieval-augmented generation for knowledge-intensive NLP tasks
+
+
+
+
+
+
+
 
 
 
@@ -188,6 +265,12 @@ Interactor: Exploring Flexible Query-Document Interaction for Fast and Accurate 
 - [x] 【DMIN】Deep Multi-Interest Network for Click-through Rate Prediction（CIKM2020）
 
   > 在DIN的基础上，得到多个用户兴趣表示。
+  
+- [x] Embedding-based Product Retrieval in Taobao Search（2021，淘宝）
+
+  > we first identify the inconsistency between the training and inference, and use the softmax function as the training objective, achieving better performance and faster convergence.
+  >
+  > Two efficient methods are further proposed to promote the model relevance, including smoothing noisy training data and generating relevance hard negative samples without requiring extra knowledge and training procedures.
 
 
 
@@ -197,9 +280,9 @@ Interactor: Exploring Flexible Query-Document Interaction for Fast and Accurate 
 
 - [x]  Representation Learning for Natural Language Processing（2020，表示学习book，刘知远）
 
-  
-
 - [x] Introduction to information retrieval（2008，book，Manning等人）
+
+  
 
 - [x] ~~Semantic Matching in Search~~（2014，综述）
 
@@ -208,6 +291,8 @@ Interactor: Exploring Flexible Query-Document Interaction for Fast and Accurate 
 - [x] An Introduction to Neural Information Retrieval.（2018，NeuIR的综述）
 
 - [x] ~~A Deep Look into Neural Ranking Models for Information Retrieval~~（2019，rerank综述）
+
+
 
 - [x] Neural Matching and Importance Learning in Information Retrieval（Dai博士论文）
 
@@ -246,7 +331,8 @@ Interactor: Exploring Flexible Query-Document Interaction for Fast and Accurate 
 > - [ ] ~~Word-word associations in document retrieval systems.（1969）~~
 > - [ ] ~~Concept based query expansion（1993）~~
 > - [ ] ~~Query Expansion Using Lexical-semantic Relations.~~
-> - [ ] ~~Using Query Contexts in Information Retrieval.~~
+> - [ ] ~~Using Query Contexts in Information Retrieval.\~~
+> - [ ] Query expansion using lexical-semantic relations.（1994）
 >
 > 局部方法：
 >
@@ -254,13 +340,28 @@ Interactor: Exploring Flexible Query-Document Interaction for Fast and Accurate 
 > - [ ] Model-based feedback in the language modeling approach to information retrieval.（2001）
 > - [ ] ~~Query expansion using local and global document analysis.~~
 
-- [ ] 伪相关反馈：Query expansion using lexical-semantic relations.（1994）
 - [ ] 伪相关反馈：Selecting good expansion terms for pseudo-relevance feedback.（2008）
 - [ ] ~~Relevance Feedback in Information Retrieval（1971，Rocchio伪相关反馈，最著名的相关反馈）~~
 - [ ] Search Engines: Information Retrieval in Practice.（查询扩展的有效性，2009）
 - [ ] ~~A comparative study of methods for estimating query language models with pseudo feedback~~.（2009，一个最先进的伪相关反馈方法，RM3中采用的相关反馈方法）
 - [ ] Pseudo-relevance feedback based on matrix factorization（2016）
 - [ ] Reducing the risk of query expansion via robust constrained optimization（2009，基于伪相关反馈的查询扩展容易遭受query drift的问题）
+
+## document expansion
+
+% Language Model Information Retrieval with Document Expansion（Tao,2006，基于聚类 ）
+% Cluster-based retrieval using language models.（Liu and Croft, 2004, 基于聚类）
+% Corpus structure, language models, and ad hoc information retrieval（Kurland and Lee, 2004， 基于聚类）
+
+
+% Document expansion based on WordNet for robust IR(2010, Agirre, 使用外部知识)
+% Document expansion using external collections.（Sherman and Efron, 2017， 使用外部知识）
+
+%  Improving Retrieval of Short Texts Through Document Expansion(Efron 2012，基于检索)
+
+% Document Expansion versus Query Expansion for Ad-hoc Retrieval(Billerbeck and Zobel (2005))
+
+
 
 ## ------------- term dependency model
 
@@ -360,6 +461,7 @@ Interactor: Exploring Flexible Query-Document Interaction for Fast and Accurate 
 - [x] ~~【GLM】 Word embedding based generalized language model for information retrieval.（2015，用word embedding inprove language mo~~del，线性结合的方法。）
 - [x] 【NTLM】~~Integrating and evaluating neural word embeddings in information retrieval~~.（2015，把word embedding和翻译模型融合，用word embedding计算词之间的翻译概率，再进行query-likelihood IR）
 - [x] ~~Using word embeddings for automatic query expansion.（2016，用word embedding进行查询扩展。使用word embedding进行**查询扩展**）~~
+- [ ] Estimating embedding vectors for queries.（2016，用word embedding做查询扩展）
 - [x] ~~Query expansion with locally-trained word embeddings（2016，用word embedding进行**查询扩展**。对每个query使用其伪相关反馈文档训练word embedding，会效率比较低，因为对每个query都要重新训练一个word2vec模型）~~
 - [x] ~~Embedding-based query language models（2016，使用word embedding进行**查询扩展**,提出了三个查询扩展方法，前两个不带相关反馈，最后一个带相关反馈。）~~
 - [x] ~~Representing documents and queries as sets of word embedded vectors for information retrieval.（2016，用word embedding inprove language model。把word embedding 融合到LM中，线性结合的方法。）~~
@@ -396,11 +498,10 @@ Interactor: Exploring Flexible Query-Document Interaction for Fast and Accurate 
 #### 图像
 
 - [ ] Supervised Hashing for Image Retrieval via Image Representation（AAAI2014）
-
 - [ ] Speed/accuracy trade-offs for modern convolutional object detectors.（2017，）
 - [ ] Generating Long Sequences with Sparse Transformers（2019，改进Transformer结构，使其可以处理长文本的输入输出）
-
 - [x] A survey on deep supervised hashing methods for image retrieval（2020，综述了最近提出的深度有监督的哈希方法，并提出了一种新的方法）
+- [x] Binary Neural Network Hashing for Image Retrieval
 
 #### 其他
 
