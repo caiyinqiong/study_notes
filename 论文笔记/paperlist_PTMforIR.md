@@ -46,6 +46,22 @@
 4. ~~Sparse, Dense, and Attentional Representations for Text Retrieval（Luan et al., 2020, TACL, ME-BERT）**ad-hoc retrieval**~~
 5. ~~Improving Document Representations by Generating Pseudo Query Embeddings for Dense Retrieval（Tang et al., 2021, ACL）  **多表达**~~
 
+#### Tailored pretraining
+
+pre-training：
+
+1. ~~Latent Retrieval for Weakly Supervised Open Domain Question Answering（Lee et al., 2019, ACL, ORQA）~~
+2. Retrieval-Augmented Language Model Pre-Training（Guu et al., 2020, ICML, REALM）
+3. ~~Pre-training Tasks for Embedding-based Large-scale Retrieval（Chang et al., 2020, ICLR, BFS+WLP+MLM）~~
+4. ~~Embedding-based Zero-shot Retrieval through Query Generation~~（Liang et al., 2020, arXiv, query generation）
+5. ~~Zero-shot Neural Passage Retrieval via Domain-targeted Synthetic Question Generation~~（Ma et al., 2020, arXiv, query generation）    **considers application to domain transfer**
+6. ~~Towards Robust Neural Retrieval Models with Synthetic Pre-Training~~（Reddy et al., 2021, arXiv, query generation）
+7. Domain-matched Pre-training Tasks for Dense Retrieval（2021） DPR-PAQ
+8. ~~【coCondenser】Unsupervised Corpus Aware Language Model Pre-training for Dense Passage Retrieval（2021）~~ 
+9. ~~【Condenser】Is Your Language Model Ready for Dense Representation Fine-tuning?~~ 
+
+#### Improved Fine-tune
+
 蒸馏：
 
 1. ~~Distilling Knowledge for Fast Retrieval-based Chat-bots（Tahami et al., 2020, SIGIR）**dialogue**~~
@@ -54,7 +70,7 @@
 4. ~~Improving Efficient Neural Ranking Models with Cross-Architecture Knowledge Distillation（Hofstätter et al., 2021, arXiv, Margin-MSE loss）**ad-hoc retrieval**~~
 5. Distilling Knowledge from Reader to Retriever for Question Answering（Izacard et al., 2020, arXiv）**ODQA**
 
-#### hard negative mining
+hard negative mining
 
 1. ~~Approximate Nearest Neighbor Negative Contrastive Learning for Dense Text Retrieval~~（Xiong et al., 2020, arXiv, ANCE）
 2. ~~Learning To Retrieve: How to Train a Dense Retrieval Model Effectively and Efficiently~~（Zhan et al., 2020, arXiv, LTRe）
@@ -66,13 +82,15 @@
 #### Advanced topic
 
 1. Relevance-guided Supervision for OpenQA with ColBERT（Khattab et al., 2021, TACL, ColBERT-QA）
-2. ~~Retrieval-augmented generation for knowledge-intensive NLP tasks（Lewis et al., 2020, NLPS, RAG）**end-to-end learning**~~
-3. ~~End-to-End Training of Multi-Document Reader and Retriever for Open-Domain Question Answering（Sachan et al., 2021, arXiv, EMDR^2） **end-to-end learning**~~
-4. ~~Joint Learning of Deep Retrieval Model and Product Quantization based Embedding Index（Zhang et al., 2021, SIGIR, Poeem） **joint learning with index**~~
-5. ~~Jointly Optimizing Query Encoder and Product Quantization to Improve Retrieval Performance（Zhan et al., 2021, CIKM, JPQ）~~**joint learning with index**
-6. ~~An Optimized Training Approach to Dense Passage Retrieval for Open-Domain Question Answering（Qu et al., 2021, ACL, RocketQA）~~**bias**
-7. ~~PAIR: Leveraging Passage-Centric Similarity Relation for Improving Dense Passage Retrieval（Ren et al., 2021, ACL, PAIR）~~
-8. ~~Learning Robust Dense Retrieval Models from Incomplete Relevance Labels~~（Prakash et al., 2021, SIGIR, RANCE） **bias**
+2. Latent Retrieval for Weakly Supervised Open Domain Question Answering（Lee et al., 2019, ACL, ORQA）
+3. Retrieval-Augmented Language Model Pre-Training（Guu et al., 2020, ICML, REALM）
+4. ~~Retrieval-augmented generation for knowledge-intensive NLP tasks（Lewis et al., 2020, NLPS, RAG）**end-to-end learning**~~
+5. ~~End-to-End Training of Multi-Document Reader and Retriever for Open-Domain Question Answering（Sachan et al., 2021, arXiv, EMDR^2） **end-to-end learning**~~
+6. ~~Joint Learning of Deep Retrieval Model and Product Quantization based Embedding Index（Zhang et al., 2021, SIGIR, Poeem） **joint learning with index**~~
+7. ~~Jointly Optimizing Query Encoder and Product Quantization to Improve Retrieval Performance（Zhan et al., 2021, CIKM, JPQ）~~**joint learning with index**
+8. ~~An Optimized Training Approach to Dense Passage Retrieval for Open-Domain Question Answering（Qu et al., 2021, ACL, RocketQA）~~**bias**
+9. ~~PAIR: Leveraging Passage-Centric Similarity Relation for Improving Dense Passage Retrieval（Ren et al., 2021, ACL, PAIR）~~
+10. ~~Learning Robust Dense Retrieval Models from Incomplete Relevance Labels~~（Prakash et al., 2021, SIGIR, RANCE） **bias**
 
 
 
@@ -97,4 +115,107 @@
 9. Contextualized Offline Relevance Weighting for Efficient and Effective Neural Retrieval（Chen et al., 2021, SIGIR）
 
     
+
+
+
+
+
+----------------
+
+# Pre-training for IR
+
+
+
+
+
+# End-to-end Learning
+
+
+
+
+
+
+
+# Multi-modal Learning
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4. Designing Effective Architectures
+
+   4.1 Uniﬁed Sequence Modeling
+
+   - Combining Autoregressive and Autoencoding Modeling.
+   - Applying Generalized Encoder-Decoder.
+
+   4.2 Cognitive-Inspired Architectures
+
+   - Maintainable Working Memory
+   - Sustainable Long-Term Memory.
+
+   4.3 More Variants of Existing PTMs
+
+5. **Utilizing Multi-Source Data**
+
+   **5.1 Multilingual Pre-Training**
+
+   **5.2 Multimodal Pre-Training**
+
+   **5.3 Knowledge-Enhanced Pre-Training**
+
+6. Improving Computational Efﬁciency
+7. Interpretation and Theoretical Analysis
+
+8. Future Directions
+
+   8.1 **Architectures and Pre-Training Methods**
+
+   - **New Architectures.**
+   - **New Pre-Training Tasks.**
+   - **Beyond Fine-Tuning.**
+   - Reliability.
+
+   8.2 Multilingual and Multimodal Pre-Training
+
+   - **More Modalities.**
+   - More Insightful Interpretation.
+   - More Downstream Applications.
+   - Transfer Learning.
+
+   8.3 Computational Efﬁciency
+
+9. 
+
+
+
+
+
+多模态：
+
+single-stream，double-strem；（使用不同的架构所适用的下游任务不同？？？）
+
+挑战：1）还在起步阶段？？？？预训练任务？？
+
+
+
+多语言：
+
+不同语言的输入，到一个模型，都能得到在统一的一个空间中的表示？
+
+可以做跨语言任务？？例如跨语言检索？？
+
+
 
